@@ -18,7 +18,7 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     services.register(middlewares)
 
     // Configure a PostgreSQL database
-    let postgresql = try PostgreSQLDatabase(config: PostgreSQLDatabaseConfig(url: ""))
+    let postgresql = try PostgreSQLDatabase(config: PostgreSQLDatabaseConfig.default())
     
     /// Register the configured PostgreSQL database to the database config.
     var databases = DatabasesConfig()
